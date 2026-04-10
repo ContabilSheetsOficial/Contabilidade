@@ -2,61 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Gerador DAS MEI</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .container {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      width: 320px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    input, select, button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-
-    button {
-      background: #2e7d32;
-      color: white;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #1b5e20;
-    }
-
-    .info {
-      margin-top: 15px;
-      font-size: 12px;
-      color: #666;
-    }
-  </style>
+  <title>Emitir DAS MEI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -67,7 +14,7 @@
   <input type="text" id="cnpj" placeholder="Digite o CNPJ" maxlength="18">
 
   <select id="ano">
-    <option value="">Selecione o Ano</option>
+    <option value="">Ano</option>
     <option>2023</option>
     <option>2024</option>
     <option>2025</option>
@@ -75,7 +22,7 @@
   </select>
 
   <select id="mes">
-    <option value="">Selecione o Mês</option>
+    <option value="">Mês</option>
     <option value="01">Janeiro</option>
     <option value="02">Fevereiro</option>
     <option value="03">Março</option>
@@ -93,47 +40,11 @@
   <button onclick="gerarDAS()">Ir para emissão</button>
 
   <div class="info">
-    Você será redirecionado para o sistema oficial para concluir a emissão.
+    Sistema otimizado para acesso rápido ao PGMEI
   </div>
 </div>
 
-<script>
-  // Máscara simples de CNPJ
-  document.getElementById("cnpj").addEventListener("input", function(e) {
-    let value = e.target.value.replace(/\D/g, "");
+<script src="script.js"></script>
 
-    value = value.replace(/^(\d{2})(\d)/, "$1.$2");
-    value = value.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
-    value = value.replace(/\.(\d{3})(\d)/, ".$1/$2");
-    value = value.replace(/(\d{4})(\d)/, "$1-$2");
-
-    e.target.value = value;
-  });
-
-  function gerarDAS() {
-    const cnpj = document.getElementById("cnpj").value.replace(/\D/g, "");
-    const ano = document.getElementById("ano").value;
-    const mes = document.getElementById("mes").value;
-
-    if (!cnpj || cnpj.length !== 14) {
-      alert("Digite um CNPJ válido");
-      return;
-    }
-
-    if (!ano || !mes) {
-      alert("Selecione ano e mês");
-      return;
-    }
-
-    // URL oficial
-    const url = "https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao";
-
-    // Redireciona na mesma aba
-    window.location.href = url;
-  }
-</script>
-
-</body>
-</html>
 </body>
 </html>
