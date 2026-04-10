@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador | Links</title>
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: url('background.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #00c3ff;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .links a i {
+      font-size: 18px;
+    }
+
+    .links a:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="container">
+    <!-- FOTO DE PERFIL -->
+    <img src="profile.jpg" alt="Foto Perfil" class="profile">
+
+    <!-- NOME -->
+    <h1>Seu Nome</h1>
+    <p>Contador | Soluções Contábeis</p>
+
+    <!-- LINKS -->
+    <div class="links">
+      <a href="#" target="_blank"><i class="fas fa-calculator"></i> Serviços Contábeis</a>
+      <a href="https://wa.me/5582999284225" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://www.instagram.com/contabilsheets?igsh=dDBoampxdmo4dXhy" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.linkedin.com/in/ewerton-renato-67032753?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://youtube.com/@contabilsheets?si=xC8vGF-Qnk9tvU6I" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+    </div>
+
+    <footer>
+      <p>© 2026 - Seu Nome</p>
+    </footer>
+  </div>
+
+</body>
+</html>
