@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CONTÁBIL SHEETS | Ewerton Renato</title>
 
-  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -43,11 +40,6 @@
       animation: fadeIn 1s ease-in-out;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     .profile-img {
       width: 120px;
       height: 120px;
@@ -55,109 +47,48 @@
       border: 4px solid rgba(0,255,136,0.6);
       object-fit: cover;
       margin: 20px auto 15px;
-      display: block;
       box-shadow: 0 0 25px rgba(0,255,136,0.6);
-      transition: 0.3s;
     }
 
-    .profile-img:hover {
-      transform: scale(1.08);
-    }
-
-    h1, h2 {
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: 26px;
-      font-weight: 600;
-    }
-
-    h2 {
-      font-size: 16px;
-      font-weight: 300;
-      margin-bottom: 10px;
-      color: #ccc;
-    }
-
-    p {
-      font-size: 14px;
-      margin-bottom: 25px;
-      color: #aaa;
-    }
+    h1 { font-size: 26px; font-weight: 600; }
+    h2 { font-size: 16px; font-weight: 300; color: #ccc; }
+    p { font-size: 14px; margin-bottom: 25px; color: #aaa; }
 
     .btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      background: linear-gradient(135deg, #00ff88, #00cc66);
-      color: #003322;
-      text-decoration: none;
-      padding: 14px 16px;
-      margin: 10px 0;
-      border-radius: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      box-shadow: 0 8px 20px rgba(0,255,136,0.3);
-      transition: 0.3s;
-      position: relative;
-      overflow: hidden;
-      min-height: 50px;
-      text-align: center;
-    }
-
-    .btn.primary {
       background: linear-gradient(135deg, #25D366, #1ebe5d);
       color: #fff;
-      box-shadow: 0 10px 25px rgba(37,211,102,0.5);
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 12px;
+      text-decoration: none;
+      position: relative;
     }
 
     .btn i {
       position: absolute;
       left: 16px;
-      font-size: 18px;
     }
 
-    .btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.2);
-      backdrop-filter: blur(10px);
-      transform: translateY(-3px) scale(1.02);
-    }
-
-    .btn:active {
-      transform: scale(0.97);
-    }
-
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
-      transition: 0.5s;
-    }
-
-    .btn:hover::before {
-      left: 100%;
-    }
-
+    /* VIDEO RESPONSIVO */
     .video-box {
       margin-top: 20px;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-      aspect-ratio: 9 / 16;
+      background: #000;
       width: 100%;
+      aspect-ratio: 9 / 16;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .video-box iframe {
       width: 100%;
       height: 100%;
+      object-fit: contain; /* ADAPTA 9:16 e 16:9 */
       border: none;
     }
 
@@ -170,14 +101,6 @@
       background: rgba(255,255,255,0.1);
       color: #fff;
       cursor: pointer;
-      backdrop-filter: blur(10px);
-      transition: 0.3s;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .sound-btn:hover {
-      background: rgba(255,255,255,0.2);
     }
 
     .footer {
@@ -195,34 +118,18 @@
 
     <h1>CONTÁBIL SHEETS</h1>
     <h2>Ewerton Renato</h2>
-    <p>Soluções contábeis para o seu negócio</p>
+    <p>SOLUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO</p>
 
-    <a href="#" class="btn primary">
-      <i class="fas fa-briefcase"></i> CONSULTORIA EMPRESARIAL
-    </a>
-
-    <a href="#" class="btn primary">
-      <i class="fas fa-briefcase"></i> CONTABILIDADE EMPRESARIAL
-    </a>
-
-    <a href="https://wa.me/5582999284225" class="btn primary">
-      <i class="fab fa-whatsapp"></i> MEU WHATSAPP
-    </a>
-
-    <a href="https://www.instagram.com/contabilsheets" class="btn primary">
-      <i class="fab fa-instagram"></i> MEU INSTAGRAM
-    </a>
-
-    <a href="https://www.linkedin.com/in/ewerton-renato-67032753/" class="btn primary">
-      <i class="fab fa-linkedin"></i> MEU LINKDIN
-    </a>
-
-    <a href="https://www.youtube.com/@contabilsheets" class="btn primary">
-      <i class="fab fa-youtube"></i> CONTEÚDOS E DICAS
-    </a>
+    <a href="#" class="btn"><i class="fas fa-briefcase"></i> CONSULTORIA EMPRESARIAL</a>
+    <a href="#" class="btn"><i class="fas fa-briefcase"></i> CONTABILIDADE EMPRESARIAL</a>
+    <a href="https://wa.me/5582999284225" class="btn"><i class="fab fa-whatsapp"></i> MEU WHATSAPP</a>
+    <a href="https://www.instagram.com/contabilsheets" class="btn"><i class="fab fa-instagram"></i> MEU INSTAGRAM</a>
+    <a href="https://www.linkedin.com/in/ewerton-renato-67032753/" class="btn"><i class="fab fa-linkedin"></i> MEU LINKDIN</a>
+    <a href="https://www.youtube.com/@contabilsheets" class="btn"><i class="fab fa-youtube"></i> CONTEÚDOS E DICAS</a>
 
     <div class="video-box">
       <iframe id="yt-video"
+        src="https://www.youtube.com/embed/videoseries?list=PLQkSthvg_zWvq7XxQPKWHY5iVrZMeE0Ke&autoplay=1&mute=1&controls=0&loop=1"
         allow="autoplay; encrypted-media"
         allowfullscreen>
       </iframe>
@@ -235,31 +142,10 @@
   </div>
 
   <script>
-    const videos = [
-      "JovQNPqzyH8",
-      "xxCW-IGWnMY",
-      "47SwZyc7ocg",
-      "S8wo9t9rZVw",
-      "tOb-j-KjgCQ"
-    ];
-
-    function carregarVideo() {
-      const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-      document.getElementById("yt-video").src =
-        `https://www.youtube.com/embed/${randomVideo}?autoplay=1&mute=1&controls=0&loop=1&playlist=${randomVideo}`;
-      return randomVideo;
-    }
-
-    let currentVideo = carregarVideo();
-
     function ativarSom() {
       document.getElementById("yt-video").src =
-        `https://www.youtube.com/embed/${currentVideo}?autoplay=1&mute=0&controls=1&loop=1&playlist=${currentVideo}`;
+        "https://www.youtube.com/embed/videoseries?list=PLQkSthvg_zWvq7XxQPKWHY5iVrZMeE0Ke&autoplay=1&mute=0&controls=1&loop=1";
     }
-
-    setInterval(() => {
-      currentVideo = carregarVideo();
-    }, 10000);
   </script>
 
 </body>
