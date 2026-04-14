@@ -132,14 +132,27 @@
 
     <h1>CONTÁBIL SHEETS</h1>
     <h2>Ewerton Renato</h2>
-    <p>SOÇUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO</p>
+    <p>SOLUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO</p>
 
     <a href="#" class="btn"><i class="fas fa-briefcase"></i> CONSULTORIA EMPRESARIAL</a>
     <a href="#" class="btn"><i class="fas fa-briefcase"></i> CONTABILIDADE EMPRESARIAL</a>
-    <a href="https://wa.me/5582999284225" class="btn"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
-    <a href="https://www.instagram.com/contabilsheets" class="btn"><i class="fab fa-instagram"></i> INSTAGRAM</a>
-    <a href="https://www.linkedin.com/in/ewerton-renato-67032753/" class="btn"><i class="fab fa-linkedin"></i> LINKDIN</a>
-    <a href="https://www.youtube.com/@contabilsheets" class="btn"><i class="fab fa-youtube"></i> DICAS E CONTEÚDOS</a>
+
+    <!-- BOTÃO WHATSAPP COM MENSAGEM AUTOMÁTICA -->
+    <a href="https://wa.me/5582999284225?text=CONTÁBIL%20SHEETS%20agradece%20o%20seu%20contato!%20Em%20posso%20ajudar%3F" class="btn">
+      <i class="fab fa-whatsapp"></i> WHATSAPP
+    </a>
+
+    <a href="https://www.instagram.com/contabilsheets" class="btn">
+      <i class="fab fa-instagram"></i> INSTAGRAM
+    </a>
+
+    <a href="https://www.linkedin.com/in/ewerton-renato-67032753/" class="btn">
+      <i class="fab fa-linkedin"></i> LINKEDIN
+    </a>
+
+    <a href="https://www.youtube.com/@contabilsheets" class="btn">
+      <i class="fab fa-youtube"></i> DICAS E CONTEÚDOS
+    </a>
 
     <div class="video-box">
       <div id="player"></div>
@@ -171,12 +184,7 @@
         events: {
           onReady: function(event) {
             event.target.playVideo();
-
-            // Tenta forçar 1080p
             event.target.setPlaybackQuality('hd1080');
-            event.target.setPlaybackQualityRange('hd1080');
-
-            // Velocidade
             event.target.setPlaybackRate(0.9);
           },
           onPlaybackQualityChange: function(event) {
