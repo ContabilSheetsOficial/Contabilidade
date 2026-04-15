@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CONTÁBIL SHEETS | Ewerton Renato</title>
 
+  <!-- FONTES -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- ICONES -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -17,18 +20,25 @@
     }
 
     body {
-      width: 100vw;
-      min-height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
 
-      background: url('https://drive.google.com/uc?export=view&id=1qlyZIL7uKhIGIEBcb3_GrpLpeiRCew45');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+  background: url('https://drive.google.com/uc?export=view&id=1qlyZIL7uKhIGIEBcb3_GrpLpeiRCew45');
 
-      margin: 0;
-      padding: 30px 15px 40px;
-      color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  margin: 0;
+  padding: 30px 15px 40px;
+  color: #fff;
+}
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .container {
@@ -37,10 +47,6 @@
       margin: 0 auto;
       text-align: center;
       padding: 20px;
-
-      backdrop-filter: blur(8px);
-      background: rgba(0,0,0,0.25);
-      border-radius: 16px;
     }
 
     .profile-img {
@@ -68,7 +74,7 @@
     p {
       font-size: 14px;
       margin-bottom: 25px;
-      color: #ddd;
+      color: #aaa;
     }
 
     .btn {
@@ -88,14 +94,14 @@
       transition: 0.3s;
     }
 
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(37,211,102,0.6);
-    }
-
     .btn i {
       position: absolute;
       left: 16px;
+    }
+
+    .btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(0,255,136,0.5);
     }
 
     .video-box {
@@ -104,16 +110,6 @@
       overflow: hidden;
       background: #000;
       aspect-ratio: 9 / 16;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .video-box iframe {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border: none;
     }
 
     .sound-btn {
@@ -135,86 +131,97 @@
     .footer {
       margin-top: 20px;
       font-size: 12px;
-      color: #ccc;
+      color: #777;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <img src="https://yt3.googleusercontent.com/ioNCpb6Bnv0ONnFAwPRjMiyZzqP0988Lx3Wxexnx9VDFrP9rlWF5FMSO6g21qobGqqplpWI-xw=s900-c-k-c0x00ffffff-no-rj" class="profile-img">
+<div class="container">
 
-    <h1>CONTÁBIL SHEETS</h1>
-    <h2>Ewerton Renato</h2>
-    <p>SOLUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO</p>
+  <img src="https://yt3.googleusercontent.com/ioNCpb6Bnv0ONnFAwPRjMiyZzqP0988Lx3Wxexnx9VDFrP9rlWF5FMSO6g21qobGqqplpWI-xw=s900-c-k-c0x00ffffff-no-rj" class="profile-img">
 
-    <a href="#" class="btn"><i class="fas fa-briefcase"></i> CONSULTORIA EMPRESARIAL</a>
-    <a href="#" class="btn"><i class="fas fa-briefcase"></i> CONTABILIDADE EMPRESARIAL</a>
+  <h1>CONTÁBIL SHEETS</h1>
+  <h2>Ewerton Renato</h2>
+  <p>SOLUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO</p>
 
-    <a href="https://wa.me/5582999284225?text=CONTÁBIL%20SHEETS,%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20contábeis.%20Pode%20me%20orientar%3F" class="btn">
-      <i class="fab fa-whatsapp"></i> WHATSAPP
-    </a>
+  <a href="#" class="btn">
+    <i class="fas fa-briefcase"></i>
+    CONSULTORIA EMPRESARIAL
+  </a>
 
-    <a href="https://www.instagram.com/contabilsheets" class="btn">
-      <i class="fab fa-instagram"></i> INSTAGRAM
-    </a>
+  <a href="#" class="btn">
+    <i class="fas fa-briefcase"></i>
+    CONTABILIDADE EMPRESARIAL
+  </a>
 
-    <a href="https://www.linkedin.com/in/ewerton-renato-67032753/" class="btn">
-      <i class="fab fa-linkedin"></i> LINKEDIN
-    </a>
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/5582999284225?text=CONTÁBIL%20SHEETS,%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20contábeis.%20Pode%20me%20orientar%3F" class="btn">
+    <i class="fab fa-whatsapp"></i>
+    WHATSAPP
+  </a>
 
-    <a href="https://www.youtube.com/@contabilsheets" class="btn">
-      <i class="fab fa-youtube"></i> DICAS E CONTEÚDOS
-    </a>
+  <!-- REDES -->
+  <a href="https://www.instagram.com/contabilsheets" class="btn">
+    <i class="fab fa-instagram"></i>
+    INSTAGRAM
+  </a>
 
-    <div class="video-box">
-      <div id="player"></div>
-    </div>
+  <a href="https://www.linkedin.com/in/ewerton-renato-67032753/" class="btn">
+    <i class="fab fa-linkedin"></i>
+    LINKEDIN
+  </a>
 
-    <button class="sound-btn" onclick="ativarSom()">🔊 ATIVAR SOM</button>
+  <a href="https://www.youtube.com/@contabilsheets" class="btn">
+    <i class="fab fa-youtube"></i>
+    DICAS E CONTEÚDOS
+  </a>
 
-    <div class="footer">© 2026 - Ewerton Renato</div>
-
+  <!-- VIDEO -->
+  <div class="video-box">
+    <div id="player"></div>
   </div>
 
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <button class="sound-btn" onclick="ativarSom()">🔊 ATIVAR SOM</button>
 
-  <script>
-    let player;
+  <div class="footer">© 2026 - Ewerton Renato</div>
 
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        playerVars: {
-          listType: 'playlist',
-          list: 'PLQkSthvg_zWsyjumuzr4V7MYkDDQaYqMR',
-          autoplay: 1,
-          mute: 1,
-          controls: 0,
-          loop: 1,
-          rel: 0
-        },
-        events: {
-          onReady: function(event) {
-            event.target.playVideo();
-            event.target.setPlaybackQuality('hd1080');
-            event.target.setPlaybackRate(0.9);
-          },
-          onPlaybackQualityChange: function(event) {
-            if (event.data !== 'hd1080') {
-              player.setPlaybackQuality('hd1080');
-            }
-          }
-        }
-      });
+</div>
+
+<!-- YOUTUBE API -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+let player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    playerVars: {
+      listType: 'playlist',
+      list: 'PLQkSthvg_zWsyjumuzr4V7MYkDDQaYqMR',
+      playlist: 'PLQkSthvg_zWsyjumuzr4V7MYkDDQaYqMR',
+      autoplay: 1,
+      mute: 1,
+      controls: 0,
+      loop: 1,
+      rel: 0,
+      playsinline: 1
+    },
+    events: {
+      onReady: function(event) {
+        event.target.playVideo();
+      }
     }
+  });
+}
 
-    function ativarSom() {
-      player.unMute();
-      player.setPlaybackRate(0.9);
-      player.setPlaybackQuality('hd1080');
-    }
-  </script>
+function ativarSom() {
+  if (player) {
+    player.unMute();
+  }
+}
+</script>
 
 </body>
 </html>
