@@ -51,7 +51,6 @@
     h2 { font-size: 16px; color: #ccc; }
     p { font-size: 14px; color: #aaa; margin-bottom: 20px; }
 
-    /* BOTÕES COM BRILHO */
     .btn {
       position: relative;
       display: flex;
@@ -77,7 +76,6 @@
       transform: scale(1.05);
     }
 
-    /* BRILHO ANIMADO */
     .btn::before {
       content: "";
       position: absolute;
@@ -100,31 +98,37 @@
       100% { left: 130%; }
     }
 
-    /* CORES */
     .servico {
       background: linear-gradient(135deg, #4facfe, #00c6ff);
     }
 
     .whatsapp { background: #25D366; }
+
     .instagram {
       background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
     }
+
     .linkedin { background: #0A66C2; }
     .youtube { background: #FF0000; }
 
-    /* VIDEO */
+    /* 🔥 VIDEO AJUSTADO */
     .video-box {
-      margin-top: 20px;
-      border-radius: 12px;
+      margin: 20px auto;
+      border-radius: 16px;
       overflow: hidden;
+      width: 100%;
+      max-width: 320px;
       aspect-ratio: 9 / 16;
       position: relative;
+      box-shadow: 0 0 25px rgba(0,200,255,0.4);
     }
 
-    #player, #player iframe {
+    #player {
       width: 100%;
       height: 100%;
       position: absolute;
+      top: 0;
+      left: 0;
     }
 
     .sound-btn {
@@ -136,6 +140,11 @@
       background: rgba(255,255,255,0.1);
       color: #fff;
       cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .sound-btn:hover {
+      background: rgba(255,255,255,0.2);
     }
 
     .footer {
@@ -165,6 +174,7 @@
   <a href="#" class="btn linkedin"><i class="fab fa-linkedin"></i>LINKEDIN</a>
   <a href="#" class="btn youtube"><i class="fab fa-youtube"></i>YOUTUBE</a>
 
+  <!-- 🎥 VIDEO -->
   <div class="video-box">
     <div id="player"></div>
   </div>
@@ -182,24 +192,27 @@ let player;
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '100%',
-    width: '100%',
     playerVars: {
       listType: 'playlist',
       list: 'PLQkSthvg_zWsyjumuzr4V7MYkDDQaYqMR',
       autoplay: 1,
       mute: 1,
       controls: 0,
-      loop: 1
+      loop: 1,
+      playlist: 'PLQkSthvg_zWsyjumuzr4V7MYkDDQaYqMR'
     },
     events: {
-      onReady: e => e.target.playVideo()
+      onReady: function(e) {
+        e.target.playVideo();
+      }
     }
   });
 }
 
 function ativarSom() {
-  player.unMute();
+  if (player) {
+    player.unMute();
+  }
 }
 </script>
 
