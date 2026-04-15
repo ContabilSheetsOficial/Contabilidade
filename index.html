@@ -97,23 +97,39 @@
       filter: brightness(1.1);
     }
 
-    /* CORES */
+    /* SERVIÇOS */
     .servico {
       background: linear-gradient(135deg, #6effb0, #2ed47a);
     }
 
+    /* WHATSAPP */
     .whatsapp {
       background: linear-gradient(135deg, #25D366, #1ebe5d);
     }
 
+    /* INSTAGRAM OFICIAL */
     .instagram {
-      background: linear-gradient(135deg, #ff9ecf, #ff4da6);
+      background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+      );
+      background-size: 200% 200%;
     }
 
+    .instagram:hover {
+      background-position: right center;
+    }
+
+    /* LINKEDIN */
     .linkedin {
       background: linear-gradient(135deg, #0A66C2, #004182);
     }
 
+    /* YOUTUBE */
     .youtube {
       background: linear-gradient(135deg, #ff4d4d, #cc0000);
     }
@@ -161,7 +177,6 @@
   <h2>Ewerton Renato</h2>
   <p>SOLUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO</p>
 
-  <!-- SERVIÇOS -->
   <a href="#" class="btn servico">
     <i class="fas fa-briefcase"></i>
     CONSULTORIA EMPRESARIAL
@@ -177,13 +192,11 @@
     CONTABILIDADE PARA MEI
   </a>
 
-  <!-- WHATSAPP -->
   <a href="https://wa.me/5582999284225?text=CONTÁBIL%20SHEETS,%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20contábeis.%20Pode%20me%20orientar%3F" class="btn whatsapp">
     <i class="fab fa-whatsapp"></i>
     WHATSAPP
   </a>
 
-  <!-- REDES -->
   <a href="https://www.instagram.com/contabilsheets" class="btn instagram">
     <i class="fab fa-instagram"></i>
     INSTAGRAM
@@ -199,7 +212,6 @@
     DICAS E CONTEÚDOS
   </a>
 
-  <!-- VIDEO -->
   <div class="video-box">
     <div id="player"></div>
   </div>
@@ -210,7 +222,6 @@
 
 </div>
 
-<!-- YOUTUBE API -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
