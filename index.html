@@ -20,20 +20,13 @@
     }
 
     body {
-  width: 100vw;
-  min-height: 100vh;
-
-  background: url('https://drive.google.com/uc?export=view&id=1qlyZIL7uKhIGIEBcb3_GrpLpeiRCew45');
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  margin: 0;
-  padding: 30px 15px 40px;
-  color: #fff;
-}
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #0a0f1c, #1a2f3a);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+      color: #fff;
+      padding: 30px 15px 40px;
+    }
 
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
