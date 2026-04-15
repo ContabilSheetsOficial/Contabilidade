@@ -18,17 +18,12 @@
 
     body {
       min-height: 100vh;
-      background: linear-gradient(-45deg, #0f2027, #203a43, #0a0f1c, #1a2f3a);
-      background-size: 400% 400%;
-      animation: gradientMove 5s ease infinite;
+      background: 
+        linear-gradient(rgba(10,15,28,0.75), rgba(10,15,28,0.75)),
+        url('https://drive.google.com/uc?export=view&id=1qlyZIL7uKhIGIEBcb3_GrpLpeiRCew45') no-repeat center center;
+      background-size: cover;
       color: #fff;
       padding: 30px 15px 40px;
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     .container {
@@ -37,6 +32,9 @@
       margin: 0 auto;
       text-align: center;
       padding: 20px;
+      backdrop-filter: blur(6px);
+      background: rgba(0,0,0,0.3);
+      border-radius: 15px;
     }
 
     .profile-img {
@@ -81,6 +79,12 @@
       font-weight: 600;
       text-transform: uppercase;
       position: relative;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(37,211,102,0.6);
     }
 
     .btn i {
@@ -115,12 +119,17 @@
       background: rgba(255,255,255,0.1);
       color: #fff;
       cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .sound-btn:hover {
+      background: rgba(255,255,255,0.2);
     }
 
     .footer {
       margin-top: 20px;
       font-size: 12px;
-      color: #777;
+      color: #bbb;
     }
   </style>
 </head>
@@ -137,7 +146,6 @@
     <a href="#" class="btn"><i class="fas fa-briefcase"></i> CONSULTORIA EMPRESARIAL</a>
     <a href="#" class="btn"><i class="fas fa-briefcase"></i> CONTABILIDADE EMPRESARIAL</a>
 
-    <!-- BOTÃO WHATSAPP COM MENSAGEM PERSONALIZADA -->
     <a href="https://wa.me/5582999284225?text=CONTÁBIL%20SHEETS,%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20contábeis.%20Pode%20me%20orientar%3F" class="btn">
       <i class="fab fa-whatsapp"></i> WHATSAPP
     </a>
@@ -164,7 +172,6 @@
 
   </div>
 
-  <!-- API YOUTUBE -->
   <script src="https://www.youtube.com/iframe_api"></script>
 
   <script>
