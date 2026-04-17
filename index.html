@@ -106,7 +106,6 @@
       background: linear-gradient(135deg, #00b09b, #96c93d);
     }
 
-    /* NOVO BOTÃO PAGAR */
     .pagar {
       background: linear-gradient(135deg, #ff7a18, #ff3d00);
     }
@@ -174,12 +173,10 @@
   <h2 class="fade-slide" style="animation-delay:0.8s;">Ewerton Renato</h2>
   <p class="fade-slide" style="animation-delay:1s;">SOLUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO</p>
 
-  <!-- BOTÃO PAGAR -->
   <a href="https://drive.google.com/file/d/17QzehHXwFcwgQx2w6n-yTH-fwCRSJwoh/view" target="_blank" class="btn pagar fade-slide" style="animation-delay:3.2s;">
     <i class="fas fa-qrcode"></i>PAGAR
   </a>
   
-  <!-- WHATSAPP COM MENSAGEM -->
   <a href="https://wa.me/5582999284225?text=Ol%C3%A1!%20Tudo%20bem%3F%20Estou%20com%20uma%20demanda%20na%20%C3%A1rea%20cont%C3%A1bil%20e%20gostaria%20de%20saber%20como%20pode%20me%20ajudar." target="_blank" class="btn whatsapp fade-slide" style="animation-delay:1.9s;">
     <i class="fab fa-whatsapp"></i>WHATSAPP
   </a>
@@ -208,7 +205,6 @@
     <i class="fas fa-coins"></i>CONSULTE SEU IMPOSTO
   </a>
 
-  
   <a href="#" class="btn servico fade-slide" style="animation-delay:1.3s;"><i class="fas fa-briefcase"></i>CONSULTORIA</a>
   <a href="#" class="btn servico fade-slide" style="animation-delay:1.5s;"><i class="fas fa-briefcase"></i>CONTABILIDADE</a>
   <a href="#" class="btn servico fade-slide" style="animation-delay:1.7s;"><i class="fas fa-briefcase"></i>MEI</a>
@@ -231,6 +227,15 @@
 
 <script>
 let player;
+
+// Vibração ao clicar
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (navigator.vibrate) {
+      navigator.vibrate(50);
+    }
+  });
+});
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
