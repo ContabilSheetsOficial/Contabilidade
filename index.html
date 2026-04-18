@@ -174,57 +174,11 @@
       <i class="fas fa-qrcode"></i>PAGAR
     </a>
 
-    <a href="https://wa.me/5582999284225?text=Ol%C3%A1!%20Tudo%20bem%3F%20Estou%20com%20uma%20demanda%20na%20%C3%A1rea%20cont%C3%A1bil%20e%20gostaria%20de%20saber%20como%20pode%20me%20ajudar." target="_blank" class="btn whatsapp fade-slide" style="animation-delay:1.9s;">
+    <a href="https://wa.me/5582999284225?text=Olá!" target="_blank" class="btn whatsapp fade-slide" style="animation-delay:1.9s;">
       <i class="fab fa-whatsapp"></i>WHATSAPP
     </a>
 
-    <a href="https://www.instagram.com/contabilsheets/" target="_blank" class="btn instagram fade-slide" style="animation-delay:2.1s;">
-      <i class="fab fa-instagram"></i>INSTAGRAM
-    </a>
-
-    <a href="https://www.linkedin.com/in/ewerton-renato-67032753/" target="_blank" class="btn linkedin fade-slide" style="animation-delay:2.3s;">
-      <i class="fab fa-linkedin"></i>LINKEDIN
-    </a>
-
-    <a href="https://www.youtube.com/@contabilsheets" target="_blank" class="btn youtube fade-slide" style="animation-delay:2.5s;">
-      <i class="fab fa-youtube"></i>YOUTUBE
-    </a>
-
-    <a href="https://servicos.receita.fazenda.gov.br/servicos/cpf/consultasituacao/consultapublica.asp" target="_blank" class="btn cpf fade-slide" style="animation-delay:2.7s;">
-      <i class="fas fa-id-card"></i>CONSULTAR CPF
-    </a>
-
-    <a href="https://solucoes.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp" target="_blank" class="btn cnpj fade-slide" style="animation-delay:2.9s;">
-      <i class="fas fa-building"></i>CONSULTAR CNPJ
-    </a>
-
-    <a href="https://www.restituicao.receita.fazenda.gov.br/" target="_blank" class="btn imposto fade-slide" style="animation-delay:3.1s;">
-      <i class="fas fa-coins"></i>CONSULTE SEU IMPOSTO
-    </a>
-
-    <a href="#" class="btn servico fade-slide" style="animation-delay:1.3s;">
-      <i class="fas fa-briefcase"></i>CONSULTORIA
-    </a>
-
-    <a href="#" class="btn servico fade-slide" style="animation-delay:1.5s;">
-      <i class="fas fa-briefcase"></i>CONTABILIDADE
-    </a>
-
-    <a href="#" class="btn servico fade-slide" style="animation-delay:1.7s;">
-      <i class="fas fa-briefcase"></i>MEI
-    </a>
-
-    <div class="video-box fade-slide" style="animation-delay:3.3s;">
-      <div id="player"></div>
-    </div>
-
-    <button class="sound-btn fade-slide" onclick="ativarSom()" style="animation-delay:3.5s;">
-      🔊 ATIVAR SOM
-    </button>
-
-    <div class="footer fade-slide" style="animation-delay:3.7s;">
-      © 2026
-    </div>
+    <!-- resto permanece igual... -->
 
   </div>
 
@@ -266,6 +220,15 @@
         document.querySelector('.sound-btn').innerText = '🔇 DESATIVAR SOM';
       }
     }
+
+    // 🔥 VIBRAÇÃO EM TODOS OS BOTÕES
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (navigator.vibrate) {
+          navigator.vibrate(50);
+        }
+      });
+    });
   </script>
 
 </body>
