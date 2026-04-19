@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CONTÁBIL SHEETS | Ewerton Renato</title>
 
+<!-- 🔥 META TAGS PARA THUMBNAIL -->
+<meta property="og:title" content="CONTÁBIL SHEETS | Ewerton Renato">
+<meta property="og:description" content="Soluções contábeis para o seu negócio. Fale comigo agora!">
+<meta property="og:image" content="https://i.imgur.com/oT7g5CR.jpeg">
+<meta property="og:type" content="website">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -21,7 +27,7 @@ color:#fff;
 display:flex;
 justify-content:center;
 padding:30px 15px;
-perspective:1000px; /* necessário para 3D */
+perspective:1000px;
 }
 
 .container{
@@ -68,13 +74,8 @@ transform-style:preserve-3d;
 
 .btn i{position:absolute;left:15px;}
 
-.btn:active{
-transform:scale(0.96) translateY(2px);
-}
-
-.btn:hover{
-transform:translateY(-2px);
-}
+.btn:active{transform:scale(0.96) translateY(2px);}
+.btn:hover{transform:translateY(-2px);}
 
 .servico{background:linear-gradient(135deg,#4facfe,#00c6ff);}
 .whatsapp{background:#25D366;}
@@ -135,7 +136,6 @@ transform-style:preserve-3d;
 .cnpj-btn{background:linear-gradient(135deg,#00c853,#009624);}
 .pf-btn{background:linear-gradient(135deg,#2196f3,#0d47a1);}
 
-/* vidro */
 .btn, .sub-btn{
 backdrop-filter: blur(10px);
 border: 1px solid rgba(255,255,255,0.15);
@@ -144,7 +144,6 @@ box-shadow:
   inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
-/* brilho */
 .btn::before, .sub-btn::before{
 content:"";
 position:absolute;
@@ -213,7 +212,8 @@ color:#777;
 <a href="https://drive.google.com/file/d/17QzehHXwFcwgQx2w6n-yTH-fwCRSJwoh/view" target="_blank" class="btn pagar">
 <i class="fas fa-qrcode"></i>PAGAR</a>
 
-<a href="https://wa.me/5582999284225" target="_blank" class="btn whatsapp">
+<!-- 🔥 WHATSAPP COM MENSAGEM AUTOMÁTICA -->
+<a href="https://wa.me/5582999284225?text=Ol%C3%A1!%20Tudo%20bem%3F%20Estou%20com%20uma%20demanda%20na%20%C3%A1rea%20cont%C3%A1bil%20e%20gostaria%20de%20saber%20como%20pode%20me%20ajudar." target="_blank" class="btn whatsapp">
 <i class="fab fa-whatsapp"></i>WHATSAPP</a>
 
 <a href="https://www.instagram.com/contabilsheets/" target="_blank" class="btn instagram">
@@ -312,24 +312,6 @@ document.querySelector('.sound-btn').innerText='🔇 DESATIVAR SOM';
 function toggleDropdown(){
 document.querySelector('.dropdown').classList.toggle('active');
 }
-
-/* 🔥 EFEITO 3D AO TOQUE */
-document.querySelectorAll('.btn, .sub-btn').forEach(btn=>{
-btn.addEventListener('mousemove',e=>{
-const rect=btn.getBoundingClientRect();
-const x=e.clientX-rect.left;
-const y=e.clientY-rect.top;
-
-const rotateX=((y/rect.height)-0.5)*10;
-const rotateY=((x/rect.width)-0.5)*-10;
-
-btn.style.transform=`rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-});
-
-btn.addEventListener('mouseleave',()=>{
-btn.style.transform="rotateX(0) rotateY(0)";
-});
-});
 
 document.querySelectorAll('.btn').forEach(btn=>{
 btn.addEventListener('click',()=>{
