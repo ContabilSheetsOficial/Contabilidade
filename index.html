@@ -61,6 +61,7 @@ color:#fff;
 text-decoration:none;
 position:relative;
 transition:0.2s;
+overflow:hidden; /* necessário para o brilho */
 }
 
 .btn i{position:absolute;left:15px;}
@@ -119,6 +120,7 @@ text-decoration:none;
 color:#fff;
 font-weight:600;
 position:relative;
+overflow:hidden; /* brilho */
 }
 
 .sub-btn i{
@@ -132,6 +134,33 @@ background:linear-gradient(135deg,#00c853,#009624);
 
 .pf-btn{
 background:linear-gradient(135deg,#2196f3,#0d47a1);
+}
+
+/* 🔥 EFEITO VIDRO + BRILHO */
+.btn, .sub-btn{
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(255,255,255,0.15);
+box-shadow: 
+  0 4px 20px rgba(0,0,0,0.25),
+  inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+/* brilho animado */
+.btn::before, .sub-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-75%;
+width:50%;
+height:100%;
+background:linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+transform:skewX(-25deg);
+transition:0.5s;
+}
+
+.btn:hover::before, .sub-btn:hover::before{
+left:125%;
 }
 
 /* VÍDEO */
