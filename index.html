@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CONTÁBIL SHEETS | Ewerton Renato</title>
 
-<!-- 🔥 META TAGS PARA THUMBNAIL -->
 <meta property="og:title" content="CONTÁBIL SHEETS | Ewerton Renato">
 <meta property="og:description" content="Soluções contábeis para o seu negócio. Fale comigo agora!">
 <meta property="og:image" content="https://i.imgur.com/oT7g5CR.jpeg">
@@ -86,6 +85,12 @@ transform-style:preserve-3d;
 .cnpj{background:linear-gradient(135deg,#005bea,#00c6fb);}
 .imposto{background:linear-gradient(135deg,#00b09b,#96c93d);}
 .pagar{background:linear-gradient(135deg,#ff7a18,#ff3d00);}
+
+/* 🔥 NOVA COR VERDE CLARO */
+.qrcode{
+background: linear-gradient(135deg, #8eea8e, #4caf50);
+color:#0b2c6b;
+}
 
 .irpf{
 background: linear-gradient(135deg, #8eea8e, #4fc3f7);
@@ -212,7 +217,9 @@ color:#777;
 <a href="https://drive.google.com/file/d/17QzehHXwFcwgQx2w6n-yTH-fwCRSJwoh/view" target="_blank" class="btn pagar">
 <i class="fas fa-qrcode"></i>PAGAR</a>
 
-<!-- 🔥 WHATSAPP COM MENSAGEM AUTOMÁTICA -->
+<a href="#" class="btn pagar" onclick="copiarPix(event)">
+<i class="fas fa-qrcode"></i>COPIAR PIX</a>
+
 <a href="https://wa.me/5582999284225?text=Ol%C3%A1!%20Tudo%20bem%3F%20Estou%20com%20uma%20demanda%20na%20%C3%A1rea%20cont%C3%A1bil%20e%20gostaria%20de%20saber%20como%20pode%20me%20ajudar." target="_blank" class="btn whatsapp">
 <i class="fab fa-whatsapp"></i>WHATSAPP</a>
 
@@ -265,7 +272,7 @@ color:#777;
 <i class="fas fa-piggy-bank"></i>VALORES ESQUECIDOS
 </a>
 
-<a href="https://ewertonrenatosilva.github.io/geradorqrcode/" target="_blank" class="btn valores">
+<a href="https://ewertonrenatosilva.github.io/geradorqrcode/" target="_blank" class="btn qrcode">
 <i class="fas fa-piggy-bank"></i>GERAR QRCODE
 </a>
 
@@ -324,6 +331,14 @@ navigator.vibrate([30,50,30]);
 }
 });
 });
+
+function copiarPix(event){
+  event.preventDefault();
+  const pix = "08471378485";
+  navigator.clipboard.writeText(pix)
+    .then(()=>{ alert("PIX copiado: " + pix); })
+    .catch(()=>{ alert("Erro ao copiar o PIX"); });
+}
 </script>
 
 </body>
