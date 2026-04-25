@@ -194,7 +194,6 @@ cursor:pointer;
 
 .footer{margin-top:20px;font-size:12px;color:#777;}
 
-/* MOBILE FIX */
 @media (max-width:480px){
 body{
 background-position:center top;
@@ -286,6 +285,40 @@ background-position:center top;
 <script>
 function toggleDropdown(){document.querySelectorAll('.dropdown')[1].classList.toggle('active');}
 function toggleDropdownRedes(){document.querySelectorAll('.dropdown')[0].classList.toggle('active');}
+
+let player;
+let somAtivo=false;
+
+function onYouTubeIframeAPIReady(){
+player=new YT.Player('player',{
+height:'100%',
+width:'100%',
+videoId:'dQw4w9WgXcQ',
+playerVars:{
+listType:'playlist',
+list:'PLQkSthvg_zWsyjumuzr4V7MYkDDQaYqMR',
+autoplay:1,
+mute:1,
+controls:0,
+loop:1,
+playlist:'PLQkSthvg_zWsyjumuzr4V7MYkDDQaYqMR'
+},
+events:{onReady:e=>e.target.playVideo()}
+});
+}
+
+function ativarSom(){
+if(!player)return;
+if(somAtivo){
+player.mute();
+somAtivo=false;
+document.querySelector('.sound-btn').innerText='🔊 ATIVAR SOM';
+}else{
+player.unMute();
+somAtivo=true;
+document.querySelector('.sound-btn').innerText='🔇 DESATIVAR SOM';
+}
+}
 </script>
 
 </body>
