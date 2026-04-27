@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -212,9 +213,10 @@ background-position:center top;
 <h2 class="fade-slide" style="animation-delay:0.8s;">Ewerton Renato</h2>
 <p class="fade-slide" style="animation-delay:1s;">SOLUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO</p>
 
-<a href="#" class="https://drive.google.com/file/d/17QzehHXwFcwgQx2w6n-yTH-fwCRSJwoh/view" style="animation-delay:1.2s;"><i class="fas fa-qrcode"></i>PAGAR</a>
+<a href="https://drive.google.com/file/d/17QzehHXwFcwgQx2w6n-yTH-fwCRSJwoh/view" target="_blank" class="btn fade-slide" style="animation-delay:1.2s;">
+<i class="fas fa-qrcode"></i>PAGAR</a>
 
-<a href="#" class="08471378485" style="animation-delay:1.4s;" onclick="copiarPix(event)">
+<a href="#" class="btn fade-slide" style="animation-delay:1.4s;" onclick="copiarPix(event)">
 <i class="fas fa-qrcode"></i>COPIAR PIX</a>
 
 <a href="https://ewertonrenatosilva.github.io/geradorqrcode/" target="_blank" class="btn qrcode fade-slide" style="animation-delay:1.6s;">
@@ -322,7 +324,19 @@ somAtivo=true;
 document.querySelector('.sound-btn').innerText='🔇 DESATIVAR SOM';
 }
 }
+
+/* 🔥 FUNÇÃO PIX */
+function copiarPix(event){
+event.preventDefault();
+const chavePix="08471378485";
+navigator.clipboard.writeText(chavePix).then(()=>{
+alert("Chave PIX copiada: "+chavePix);
+}).catch(()=>{
+alert("Erro ao copiar. Copie manualmente: "+chavePix);
+});
+}
 </script>
 
 </body>
 </html>
+```
