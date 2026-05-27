@@ -14,12 +14,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
 min-height:100vh;
@@ -65,7 +60,7 @@ object-fit:cover;
 margin:20px auto;
 display:block;
 box-shadow:0 0 25px rgba(0,200,255,0.6),
-0 0 60px rgba(0,200,255,0.3);
+           0 0 60px rgba(0,200,255,0.3);
 transition:0.3s;
 }
 
@@ -73,20 +68,9 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-h1{
-font-size:24px;
-}
-
-h2{
-font-size:15px;
-color:#ccc;
-}
-
-p{
-font-size:13px;
-color:#aaa;
-margin-bottom:20px;
-}
+h1{font-size:24px;}
+h2{font-size:15px;color:#ccc;}
+p{font-size:13px;color:#aaa;margin-bottom:20px;}
 
 .btn{
 display:flex;
@@ -119,25 +103,11 @@ transform:scale(1.05) translateY(-2px);
 box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
 
-.servico{
-background:linear-gradient(135deg,#4facfe,#00c6ff);
-}
-
-.whatsapp{
-background:#25D366;
-}
-
-.instagram{
-background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
-}
-
-.linkedin{
-background:#0A66C2;
-}
-
-.youtube{
-background:#FF0000;
-}
+.servico{background:linear-gradient(135deg,#4facfe,#00c6ff);}
+.whatsapp{background:#25D366;}
+.instagram{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);}
+.linkedin{background:#0A66C2;}
+.youtube{background:#FF0000;}
 
 .cpf{
 background:linear-gradient(135deg,#f7c948,#d4a017);
@@ -221,15 +191,15 @@ background:linear-gradient(135deg,#00c853,#009624);
 background:linear-gradient(135deg,#2196f3,#0d47a1);
 }
 
-.btn,.sub-btn{
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.15);
-box-shadow:
-0 6px 20px rgba(0,0,0,0.35),
-inset 0 1px 0 rgba(255,255,255,0.2);
+.btn, .sub-btn{
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255,255,255,0.15);
+box-shadow: 
+  0 6px 20px rgba(0,0,0,0.35),
+  inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
-.btn::before,.sub-btn::before{
+.btn::before, .sub-btn::before{
 content:"";
 position:absolute;
 top:0;
@@ -241,7 +211,7 @@ transform:skewX(-25deg);
 transition:0.5s;
 }
 
-.btn:hover::before,.sub-btn:hover::before{
+.btn:hover::before, .sub-btn:hover::before{
 left:125%;
 }
 
@@ -281,77 +251,6 @@ font-size:12px;
 color:#777;
 }
 
-/* 🔐 TELA DE SENHA */
-#telaSenha{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#0a0f1c;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:99999;
-}
-
-.senha-box{
-width:90%;
-max-width:320px;
-background:rgba(255,255,255,0.08);
-padding:30px;
-border-radius:20px;
-backdrop-filter:blur(10px);
-box-shadow:0 0 30px rgba(0,200,255,0.3);
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-}
-
-.senha-box h2{
-margin-bottom:10px;
-color:#fff;
-}
-
-.senha-box p{
-margin-bottom:20px;
-color:#ccc;
-font-size:14px;
-}
-
-.senha-box input{
-width:100%;
-padding:14px;
-border:none;
-border-radius:10px;
-outline:none;
-margin-bottom:15px;
-font-size:16px;
-text-align:center;
-}
-
-.senha-box button{
-width:100%;
-padding:14px;
-border:none;
-border-radius:10px;
-background:linear-gradient(135deg,#4facfe,#00c6ff);
-color:#fff;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
-}
-
-.senha-box button:hover{
-transform:scale(1.03);
-}
-
-#erroSenha{
-display:block;
-margin-top:12px;
-color:#ff4d4d;
-font-size:13px;
-}
-
 @media (max-width:480px){
 body{
 background-position:center top;
@@ -361,20 +260,6 @@ background-position:center top;
 </head>
 
 <body>
-
-<!-- 🔐 SENHA -->
-<div id="telaSenha">
-<div class="senha-box">
-<h2>ÁREA RESTRITA</h2>
-<p>Digite a senha para acessar</p>
-
-<input type="password" id="senhaInput" placeholder="Digite a senha">
-
-<button onclick="verificarSenha()">ENTRAR</button>
-
-<span id="erroSenha"></span>
-</div>
-</div>
 
 <div class="container">
 
@@ -390,7 +275,7 @@ Ewerton Renato
 SOLUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO
 </p>
 
-<a href="https://drive.google.com/file/d/17QzehHXwFcwgQx2w6n-yTH-fwCRSJwoh/view" target="_blank" class="btn fade-slide pagar" style="animation-delay:1.2s;">
+<a href="https://drive.google.com/file/d/17QzehHXwFcwgQx2w6n-yTH-fwCRSJwoh/view" target="_blank" class="btn pagar fade-slide" style="animation-delay:1.2s;">
 <i class="fas fa-qrcode"></i>PAGAR
 </a>
 
@@ -438,7 +323,8 @@ SOLUÇÕES CONTÁBEIS PARA O SEU NEGÓCIO
 <i class="fas fa-building"></i>CONSULTAR CNPJ
 </a>
 
-<a href="https://www.restituicao.receita.fazenda.gov.br/" target="_blank" class="btn imposto fade-slide" style="animation-delay:2.6s;">
+<!-- 🔐 BOTÃO COM SENHA -->
+<a href="#" class="btn imposto fade-slide" style="animation-delay:2.6s;" onclick="acessarImposto(event)">
 <i class="fas fa-coins"></i>CONSULTAR IMPOSTO RENDA
 </a>
 
@@ -536,7 +422,7 @@ document.querySelector('.sound-btn').innerText='🔇 DESATIVAR SOM';
 }
 }
 
-/* 🔥 PIX */
+/* 🔥 FUNÇÃO PIX */
 function copiarPix(event){
 event.preventDefault();
 
@@ -549,25 +435,21 @@ alert("Erro ao copiar. Copie manualmente: "+chavePix);
 });
 }
 
-/* 🔐 SENHA */
-function verificarSenha(){
-const senha=document.getElementById("senhaInput").value;
+/* 🔐 SENHA NO BOTÃO */
+function acessarImposto(event){
+event.preventDefault();
 
-if(senha==="123456"){
-document.getElementById("telaSenha").style.display="none";
-}else{
-document.getElementById("erroSenha").innerText="Senha incorreta!";
-}
-}
+const senha = prompt("Digite a senha para acessar:");
 
-/* ENTER */
-document.addEventListener("DOMContentLoaded",()=>{
-document.getElementById("senhaInput").addEventListener("keypress",function(e){
-if(e.key==="Enter"){
-verificarSenha();
+if(senha === "123456"){
+window.open(
+"https://www.restituicao.receita.fazenda.gov.br/",
+"_blank"
+);
+}else if(senha !== null){
+alert("Senha incorreta!");
 }
-});
-});
+}
 </script>
 
 </body>
